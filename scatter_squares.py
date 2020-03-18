@@ -68,28 +68,49 @@ import matplotlib.pyplot as plt
 
 
 
-# Part 5: Color Maps - Defining custom colors
-# like so --> ax.scatter(x_values, y_values, c='red', s=10)
-# or by using the RGB method like so --> ax.scatter(x_values, y_values, c=(0, 0.8, 0), s=10)
-# or by using the COLOR MAPS as show below
+# # Part 5: Color Maps - Defining custom colors
+# # like so --> ax.scatter(x_values, y_values, c='red', s=10)
+# # or by using the RGB method like so --> ax.scatter(x_values, y_values, c=(0, 0.8, 0), s=10)
+# # or by using the COLOR MAPS as show below
+#
+# x_values = range(1, 1001)
+# y_values = [x**2 for x in x_values]
+#
+# plt.style.use('seaborn')
+# fig, ax = plt.subplots()
+#
+# ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
+#
+# ax.set_title("Square Numbers", fontsize=20)
+# ax.set_xlabel("Values", fontsize=12)
+# ax.set_ylabel("Square of Values", fontsize=12)
+#
+# ax.axis([0, 1100, 0, 1100000])
+#
+# plt.show()
+
+
+# OPTIONAL: Saving plots automatically --> plt.savefig('~filename~.png', bbox_inches='tight')
+
+# Part 6: Practice using Cube (x**3)
 
 x_values = range(1, 1001)
-y_values = [x**2 for x in x_values]
+y_values = [x**3 for x in x_values]
 
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
 
 ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
 
-ax.set_title("Square Numbers", fontsize=20)
+ax.set_title("Cube Numbers", fontsize=20)
 ax.set_xlabel("Values", fontsize=12)
-ax.set_ylabel("Square of Values", fontsize=12)
+ax.set_ylabel("Cube of Values", fontsize=12)
 
-ax.axis([0, 1100, 0, 1100000])
+ax.axis([0, 1100, 0, 1300000000])
+
+plt.savefig('plots/scatter3.png', dpi=100)
 
 plt.show()
-
-
 
 
 
