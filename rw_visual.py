@@ -85,25 +85,53 @@ from random_walk import RandomWalk
 
 
 
-# Part 5: Cleaning up the axes
+# # Part 5: Cleaning up the axes
+# while True:
+#     rw =RandomWalk()
+#     rw.fill_walk()
+#
+#     plt.style.use('seaborn')
+#     fig, ax = plt.subplots()
+#     point_numbers = range(rw.num_points)
+#
+#     ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+#
+#     ax.scatter(0, 0, c='green', edgecolors='none', s=175)
+#     ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=175)
+#
+#     # Remove the axes
+#     ax.get_xaxis().set_visible(False)
+#     ax.get_yaxis().set_visible(False)
+#
+#     plt.savefig("plots/rw5.png", dpi=100)
+#
+#     plt.show()
+#
+#     keep_running = input("Shall we go for another walk? (y/n): ")
+#     if keep_running == 'n':
+#         break
+
+
+
+
+# Part 6: Adding Plot Points with bigger data; configuring the plot size
 while True:
-    rw =RandomWalk()
+    rw = RandomWalk(50_000) # here we increase the data to be ten times bigger
     rw.fill_walk()
 
     plt.style.use('seaborn')
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(15,9)) # putting 'figsize' into this function allows us to control the plot's size
     point_numbers = range(rw.num_points)
 
-    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=1) # we set size to 1
 
-    ax.scatter(0, 0, c='green', edgecolors='none', s=175)
-    ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=175)
+    ax.scatter(0, 0, c='green', edgecolors='none', s=100)
+    ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=100)
 
-    # Remove the axes
-    ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)
+    # ax.get_xaxis().set_visible(False)
+    # ax.get_yaxis().set_visible(False)
 
-    plt.savefig("plots/rw5.png", dpi=100)
+    plt.savefig("plots/rw6.png", dpi=100)
 
     plt.show()
 
