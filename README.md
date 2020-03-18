@@ -1,5 +1,4 @@
 # Data-Visualization-Practice (In Progress)
----------------------------------------------------------------------------------------------------------------
 
 From Eric Matthes project-based programming book titled "Python Crash Course", This repository is used solely as a (practice) guide to hone my data analytics skills.
 
