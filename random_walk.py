@@ -14,7 +14,7 @@ class RandomWalk:
         """ Calculate all the points of the walk"""
 
         # Keep walking until the max points is reached
-        while len(self.x_values) < self.num_points
+        while len(self.x_values) < self.num_points:
 
             # We decide where to go and how far in that direction
 
