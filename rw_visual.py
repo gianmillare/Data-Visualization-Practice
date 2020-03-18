@@ -57,9 +57,37 @@ from random_walk import RandomWalk
 #         break
 
 
-# Part 4: Plotting the Starting and Ending points
+
+
+# # Part 4: Plotting the Starting and Ending points
+# while True:
+#     rw = RandomWalk()
+#     rw.fill_walk()
+#
+#     plt.style.use('seaborn')
+#     fig, ax = plt.subplots()
+#     point_numbers = range(rw.num_points)
+#
+#     ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+#
+#     # Here we begin emphasizing the beginning and ending points
+#     ax.scatter(0, 0, c='green', edgecolors='none', s=175)
+#     ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=175)
+#
+#     plt.savefig("plots/rw4.png", dpi=100)
+#
+#     plt.show()
+#
+#     keep_running = input("Shall we go for another walk? (y/n): ")
+#     if keep_running == 'n':
+#         break
+
+
+
+
+# Part 5: Cleaning up the axes
 while True:
-    rw = RandomWalk()
+    rw =RandomWalk()
     rw.fill_walk()
 
     plt.style.use('seaborn')
@@ -68,14 +96,18 @@ while True:
 
     ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
 
-    # Here we begin emphasizing the beginning and ending points
-    ax.scatter(0, 0, c='green', edgecolors='none', s=100)
+    ax.scatter(0, 0, c='green', edgecolors='none', s=175)
     ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=175)
 
-    plt.savefig("plots/rw4.png", dpi=175)
+    # Remove the axes
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
+
+    plt.savefig("plots/rw5.png", dpi=100)
 
     plt.show()
 
     keep_running = input("Shall we go for another walk? (y/n): ")
     if keep_running == 'n':
         break
+
