@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 #
 # plt.show()
 
+
+
+
 # # Part 2: Styling a plot with a single point
 # plt.style.use('seaborn')
 # fig, ax = plt.subplots()
@@ -19,6 +22,9 @@ import matplotlib.pyplot as plt
 # ax.tick_params(axis='both', which='major', labelsize=14)
 #
 # plt.show()
+
+
+
 
 
 # # Part 3: Plotting a series of points
@@ -37,20 +43,53 @@ import matplotlib.pyplot as plt
 #
 # plt.show()
 
-# Part 4: Calculating data automatically using scatter plot
+
+
+
+
+# # Part 4: Calculating data automatically using scatter plot
+# x_values = range(1, 1001)
+# y_values = [x**2 for x in x_values] # we are squaring every value(x) in the x_values list
+#
+# plt.style.use('seaborn')
+# fig, ax = plt.subplots()
+# ax.scatter(x_values, y_values, s=10)
+#
+# ax.set_title("Square Numbers", fontsize=20)
+# ax.set_xlabel("Values", fontsize=12)
+# ax.set_ylabel("Square of Values", fontsize=12)
+#
+# ax.axis([0, 1100, 0, 1100000]) # we use this method to specify the range of each axis because the values are much larger.
+# # This method requires the min and max values for the x and y axis
+# #ax.tick_params(axis='both', which='major', labelsize=14)
+#
+# plt.show()
+
+
+
+
+# Part 5: Color Maps - Defining custom colors
+# like so --> ax.scatter(x_values, y_values, c='red', s=10)
+# or by using the RGB method like so --> ax.scatter(x_values, y_values, c=(0, 0.8, 0), s=10)
+# or by using the COLOR MAPS as show below
+
 x_values = range(1, 1001)
-y_values = [x**2 for x in x_values] # we are squaring every value(x) in the x_values list
+y_values = [x**2 for x in x_values]
 
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
-ax.scatter(x_values, y_values, s=10)
+
+ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
 
 ax.set_title("Square Numbers", fontsize=20)
 ax.set_xlabel("Values", fontsize=12)
 ax.set_ylabel("Square of Values", fontsize=12)
 
-ax.axis([0, 1100, 0, 1100000]) # we use this method to specify the range of each axis because the values are much larger.
-# This method requires the min and max values for the x and y axis
-#ax.tick_params(axis='both', which='major', labelsize=14)
+ax.axis([0, 1100, 0, 1100000])
 
 plt.show()
+
+
+
+
+
