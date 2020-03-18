@@ -1,10 +1,12 @@
 # Data-Visualization-Practice (In Progress)
 
-From Eric Matthes project-based programming book titled "Python Crash Course", this repository is used solely as a (practice) guide to hone my <u>Python<u> Programming and Data Analytics skills.
+From Eric Matthes project-based programming book titled "Python Crash Course", this repository is used solely as a (practice) guide to hone my Python Programming and Data Analytics skills.
 
 ---------------------------------------------------------------------------------------------------------------
 
-Here you will find several data visualization techniques ranging from basic line graphs to advanced-artsy charts. This repository will also be used in my future projects as I dive deeper into data sciences. 
+Here you will find several data visualization techniques ranging from basic line graphs to advanced-artsy charts. Please note that not all graphs are shown below. The rest are located in the "plots" folder. 
+
+This repository will also be used in my future projects as I dive deeper into data sciences. 
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -35,10 +37,12 @@ Using the Random and Choice libraries in Python, the charts you see below are a 
 
 <br>
 
+Here I added markers to show where the walk started and ended
 ![](plots/rw4.png)
 
 <br>
 
+This plot uses ten times more data than the previous plots. Decreasing point size gives the plot a more cloud-like appearnance.
 ![](plots/rw6.png)
 
 ---------------------------------------------------------------------------------------------------------------
