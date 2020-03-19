@@ -47,10 +47,14 @@ for value in range(1, die.num_sides + 1):
     frequencies.append(frequency)
 
 # Visualize the results
-x_values = list(range(1, die.num_sides + 1)) # x-axis will be the number of sides + 1
-data = [Bar(x=x_values, y=frequencies)]
+x_values = list(range(1, die.num_sides + 1)) # x-axis will be the number of sides + 1, 'list' will list out the results
+data = [Bar(x=x_values, y=frequencies)] # 'Bar' is a plotly function the creates a bar chart using the x and y values
 
-x_axis_config = {'title': 'Result'}
+x_axis_config = {'title': 'Result'} # This is how you configure the x and y axis
 y_axis_config = {'title': 'Frequency of Result'}
+
+# Layout() is a plotly function that returns an object that specifies the graph as a whole
 my_layout = Layout(title='Results of rolling one D6 1000 times', xaxis=x_axis_config, yaxis=y_axis_config)
+
+# offline is how we generate the plot, using the pre-determined variables 'data' and 'my_layout'
 offline.plot({'data': data, 'layout': my_layout}, filename='plotly_htmls/d6.html')
