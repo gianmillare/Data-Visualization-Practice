@@ -61,13 +61,43 @@ from die import Die
 
 
 
-# Part 4: Rolling two D6
-die_1 = Die()
-die_2 = Die()
+# # Part 4: Rolling two D6
+# die_1 = Die()
+# die_2 = Die()
+#
+# # Make the rolls
+# results = []
+# for roll_num in range(1000):
+#     result = die_1.roll() + die_2.roll()
+#     results.append(result)
+#
+# # Analyze the results and frequency
+# frequencies = []
+# max_result = die_1.num_sides + die_2.num_sides
+# for value in range(2, max_result + 1):
+#     frequency = results.count(value)
+#     frequencies.append(frequency)
+#
+# # Visualize the results
+# x_values = list(range(2, max_result + 1))
+# data = [Bar(x=x_values, y=frequencies)]
+#
+# x_axis_config = {'title': 'Result', 'dtick': 1} # the 'dtick' setting tells plotly to label every tick mark
+# y_axis_config = {'title': 'Frequency of Result'}
+#
+# my_layout = Layout(title='Results of rolling two D6 dice 1000 times', xaxis=x_axis_config, yaxis=y_axis_config)
+# offline.plot({'data': data, 'layout': my_layout}, filename='plotly_htmls/d6_d6.html')
 
-# Make the rolls
+
+
+# Part 5: Rolling 2 dice of different sizes
+# One D6 and one D10
+die_1 = Die()
+die_2 = Die(10)
+
+# Start rolling
 results = []
-for roll_num in range(1000):
+for roll_num in range(50_000):
     result = die_1.roll() + die_2.roll()
     results.append(result)
 
@@ -82,9 +112,9 @@ for value in range(2, max_result + 1):
 x_values = list(range(2, max_result + 1))
 data = [Bar(x=x_values, y=frequencies)]
 
-x_axis_config = {'title': 'Result', 'dtick': 1}
-y_axis_config = {'title': 'Frequency of Result'}
+x_axis_config = {'title': 'Results', 'dtick': 1}
+y_axis_config = {'title': 'Frequency of Results'}
 
-my_layout = Layout(title='Results of rolling two D6 dice 1000 times', xaxis=x_axis_config, yaxis=y_axis_config)
-offline.plot({'data': data, 'layout': my_layout}, filename='plotly_htmls/d6_d6.html')
+my_layout = Layout(title='Results of rolling a D6 and a D10 dice 1000 times', xaxis=x_axis_config, yaxis=y_axis_config)
+offline.plot({'data': data, 'layout': my_layout}, filename='plotly_htmls/d6_d10.html')
 
