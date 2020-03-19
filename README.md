@@ -47,4 +47,20 @@ This plot uses ten times more data than the previous plots. Decreasing point siz
 
 ---------------------------------------------------------------------------------------------------------------
 
-### Part 4: Rolling Dice with Plotly (Work in Progress)
+### Part 4: Rolling Dice with Plotly
+
+Using Plotly, I visualized the probability of a rolling a specific side of a die. Below is an image of rolling a single die.
+
+![](plots/d6.png)
+
+<br>
+
+As I advanced further into more mathematical concepts, I added another die. Rolling two D6 dice imaged below.
+
+![](plots/d6_d6.png)
+
+<br>
+
+Finally, I alter the code a bit to visualize the probability of rolling a value using two different (D6 and D10) sized dice.
+
+![](plots/d6_d10.png)
