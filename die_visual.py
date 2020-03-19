@@ -115,6 +115,6 @@ data = [Bar(x=x_values, y=frequencies)]
 x_axis_config = {'title': 'Results', 'dtick': 1}
 y_axis_config = {'title': 'Frequency of Results'}
 
-my_layout = Layout(title='Results of rolling a D6 and a D10 dice 1000 times', xaxis=x_axis_config, yaxis=y_axis_config)
+my_layout = Layout(title='Results of rolling a D6 and a D10 dice 50,000 times', xaxis=x_axis_config, yaxis=y_axis_config)
 offline.plot({'data': data, 'layout': my_layout}, filename='plotly_htmls/d6_d10.html')
 
